@@ -1,2 +1,2 @@
 # Dog-run
-A simple javascript game
+A simple 2D game built using javascript and HTML,CSS.
