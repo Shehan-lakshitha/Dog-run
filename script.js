@@ -11,8 +11,8 @@ class Enemy{
     constructor(){
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
-        this.width = 100;
-        this.height = 100;
+        this.width = 200;
+        this.height = 200;
     }
     update(){
         this.x++;
