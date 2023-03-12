@@ -23,4 +23,4 @@ All contributions are kindly welcome.
 </p>
 
 # FeedBack
-All feedback are kindly welcome through shehanlaksh@gmail.com
+Please send your feedback to shehanlaksh@gmail.com
