@@ -16,7 +16,7 @@ class Enemy{
         this.speed = Math.random() * 4 + 1;
         this.spriteWidth = 266;
         this.spriteHeight = 188;
-        this.width = this.spriteWidth / 2.5; //done to reduce the photo expand
+        this.width = this.spriteWidth / 2.5; //done to reduce the pixel expanding
         this.height = this.spriteHeight / 2.5;
         this.x = Math.random() * (canvas.width - this.width);
         this.y = Math.random() * (canvas.height - this.height);
