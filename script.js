@@ -3,7 +3,7 @@ const canvas = document.getElementById('canvas1');
 const ctx = canvas.getContext('2d');
 CANVAS_WIDTH = canvas.width = 500;
 CANVAS_HEIGHT = canvas.height = 1000;
-const numberOfEnemies = 50;
+const numberOfEnemies = 20;
 const enemiesArray = [];
 
 let gameFrame = 0;
@@ -22,11 +22,12 @@ class Enemy{
         this.frame = 0;
         this.flapSpeed = Math.floor(Math.random() * 3 + 1);
         this.angle = 0;
+        this.angleSpeed = Math.random() * 0.02;
     }
     update(){
         this.x -= this.speed;
-        this.y += Math.sin(this.angle);
-        this.angle += 0.1;
+        this.y += 10 * Math.sin(this.angle);
+        this.angle += this.angleSpeed;
         if(this.x + this.width < 0) this.x = canvas.width; //creates a loop in enemies
         // animate sprites
         if (gameFrame % this.flapSpeed == 0){
