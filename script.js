@@ -23,10 +23,11 @@ class Enemy{
         this.flapSpeed = Math.floor(Math.random() * 3 + 1);
         this.angle = 0;
         this.angleSpeed = Math.random() * 0.02;
+        this.curve = Math.random()  * 10;
     }
     update(){
         this.x -= this.speed;
-        this.y += 10 * Math.sin(this.angle);
+        this.y += this.curve * Math.sin(this.angle);
         this.angle += this.angleSpeed;
         if(this.x + this.width < 0) this.x = canvas.width; //creates a loop in enemies
         // animate sprites
