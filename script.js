@@ -22,12 +22,12 @@ class Enemy{
         this.frame = 0;
         this.flapSpeed = Math.floor(Math.random() * 3 + 1);
         this.angle = 0;
-        this.angleSpeed = Math.random() * 0.9;
-        this.curve = Math.random()  * 10;
+        this.angleSpeed = Math.random() * 2;
+        this.curve = Math.random()  * 200;
     }
     update(){
-        this.x = 100 * Math.sin(this.angle * Math.PI/180);
-        //this.y += this.curve * Math.sin(this.angle);
+        this.x = this.curve * Math.sin(this.angle * Math.PI/180) + (canvas.width/2 - this.width/2);
+        this.y = this.curve * Math.tan(this.angle * Math.PI/180) + (canvas.height/2 - this.height/2);
         this.angle += this.angleSpeed;
         if(this.x + this.width < 0) this.x = canvas.width; //creates a loop in enemies
         // animate sprites
